@@ -5,6 +5,6 @@ from pyspark.sql import functions as F
 @dp.table
 def bakehouse_sales_transactions():
     return( spark.read.table("samples.bakehouse.sales_transactions")
-    .select("transactionID", "franchiseID", "totalPrice" ))
+    .select("transactionID", "franchiseID", "customerID", "product", "totalPrice" ))
 
     
